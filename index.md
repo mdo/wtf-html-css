@@ -48,14 +48,14 @@ html {
   font-size: 16px;
 }
 
-/* Shits the bed */
+/* Causes flashing bug in Mobile Safari */
 @media (min-width: 40rem) {
   html {
     font-size: 20px;
   }
 }
 
-/* Doesn't shit the bed */
+/* Works great in Mobile Safari */
 @media (min-width: 40em) {
   html {
     font-size: 20px;
