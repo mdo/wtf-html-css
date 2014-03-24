@@ -1,6 +1,6 @@
 # WTF, HTML and CSS?
 
-Open an issue or a pull request to suggest changes or additions. Support for any of the issues below is not provided.
+Open an issue or a pull request to suggest changes or additions. Support for items listed below is not provided.
 
 -----
 
