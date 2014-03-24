@@ -1,0 +1,195 @@
+---
+layout: default
+---
+
+### Contents
+
+- [Declare a doctype](#doctype)
+- [Box model math](#box-model-math)
+- [Rem units and Mobile Safari](#rems-mobile-safari)
+- [Floats first](#floats-first)
+- [Floats and clearing](#floats-clearing)
+- [Floats and computed height](#floats-computed-height)
+- [Floated are block level](#floats-block-level)
+- [Vertical margins often collapse](#vertical-margins-collapse)
+- [Styling table rows](#styling-table-rows)
+- [Firefox and `<input>` buttons](#buttons-firefox)
+- [Always set a `type` on `<button>`s](#buttons-type)
+- [Internet Explorer's selector limit](#ie-selector-limit)
+- [Position explained](#position-explained)
+- [Position and width](#position-width)
+- [`position: fixed` and `transform`](#position-transform)
+
+
+<a name="doctype"></a>
+### Declare a doctype
+Always include a doctype. I recommend the simple HTML5 doctype:
+
+```html
+<!DOCTYPE html>
+```
+
+Skipping the doctype can cause issues with malformed tables, inputs, and more.
+
+
+<a name="box-model"></a>
+### Box model math
+Elements that have a set `width` become *wider* when they have `padding` and/or `border-width`. To avoid these problems, make use of the now common [`box-sizing: border-box` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+
+
+<a name="rems-mobile-safari"></a>
+### Rem units and Mobile Safari
+While Mobile Safari supports the use of `rem`s in all property values, it seems to shit the bed when `rem`s are used in dimensional media queries. For now, use `em`s.
+
+```css
+/* Shits the bed */
+@media (min-width: 40rem) {
+  .element { }
+}
+
+/* Doesn't shit the bed */
+@media (min-width: 40em) {
+  .element { }
+}
+```
+
+**Help!** If you have a link to an Apple or WebKit bug report for this, I'd love to include it. I'm unsure where to report this as it only applies to Mobile, and not Desktop, Safari.
+
+<a name="floats-first"></a>
+### Floats first
+Floated elements should always come first in the document order. Floats have to have something to wrap around, otherwise they can cause a step down effect.
+
+```html
+<div class="parent">
+  <div class="float">Float</div>
+  <div class="content">
+    <!-- ... -->
+  </div>
+</div>
+```
+
+
+<a name="floats-clearing"></a>
+### Floats and clearing
+If you float it, you *probably* need to clear it. Any content that follows an element with a `float` will wrap around that element until cleared. To clear floats, use one of the following techniques.
+
+Use [the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) to clear your floats with a separate class.
+
+```css
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+```
+
+Alternatively, specify `overflow`, with `auto` or `hidden`, on the parent.
+
+```css
+.parent {
+  overflow: auto; /* clearfix */
+}
+.other-parent {
+  overflow: hidden; /* clearfix */
+}
+```
+
+Be aware that `overflow` can cause other unintended side effects, typically around positioned elements within the parent.
+
+Keep your future self and your coworkers happy by including a comment like `/* clearfix */` when clearing floats as the property can be used for other reasons.
+
+
+<a name="floats-computed-height"></a>
+### Floats and computed height
+A parent element that has only floated content will have a computed `height: 0;`. Add a clearfix to the parent to force browsers to compute a height.
+
+
+<a name="floats-block-level"></a>
+### Floated elements are block level
+Elements with  a `float` will automatically become `display: block`. **Do not set both.**
+
+```css
+.element {
+  float: left;
+  display: block; /* Not necessary */
+}
+```
+
+**Fun fact:** Years ago, we *had* to set `display: inline` for floats to work properly in IE6. However, those days have long passed.
+
+
+<a name="vertical-margins-collapse"></a>
+### Vertical margins collapse
+Top and bottom margins can and will collapse in many situations, but never for floated or absolutely positioned elements. [Read this MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing) to find out more. **Horizontal margins will never collapse.**
+
+
+<a name="styling-table-rows"></a>
+### Styling table rows
+Table rows, `<tr>`s, cannot be styled unless you set `border-collapse: separate;` on the parent `<table>`.
+
+
+<a name="buttons-firefox"></a>
+### Firefox and `<input>` buttons
+For reasons unknown, Firefox still applies styles to submit and button `<input>`s that cannot be overridden via custom CSS. **Stick to `<button>` elements.**
+
+```html
+<!-- Not so good -->
+<input type="submit" value="Save changes">
+<input type="button" value="Cancel">
+
+<!-- Super good everywhere -->
+<button type="submit">Save changes</button>
+<button type="button">Cancel</button>
+```
+
+Some of Firefox's styles can be overridden with this snippet of CSS:
+
+```css
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+```
+
+However, [as David Walsh outlines](http://davidwalsh.name/firefox-buttons), this doesn't fix everything. Just use the `<button>` element.
+
+
+<a name="buttons-type"></a>
+### Always set a `type` on `<button>`s
+The default value is `submit`, meaning any button in a form can submit the form. Use `type="button"` for anything that doesn't submit the form and `type="submit"` for those that do.
+
+```html
+<button type="submit">Save changes</button>
+<button type="button">Cancel</button>
+```
+
+For actions that require a `<button>` and are not in a form, use the `type="button"`.
+
+```html
+<button class="dismiss" type="button">x</button>
+```
+
+
+<a name="ie-selector-limit"></a>
+### Internet Explorer's selector limit
+Internet Explorer 9 and below have a max of 4,096 selectors per stylesheet. Anything after this limit is ignored by the browser. Either split your CSS up, or start refactoring. I'd suggest the latter.
+
+
+<a name="position-explained"></a>
+### Position explained
+Elements with `position: fixed;` are placed relative to the browser viewport. Elements with `position: absolute;` are placed relative to their closest parent with a position other than `static` (e.g., `relative`, `absolute`, or `fixed`).
+
+
+<a name="position-width"></a>
+### Position and width
+You don't need to set `width: 100%` on an element with `position: [absolute|fixed]` with both `left` and `right` values declared. Use either `width` or `left` and `right`, but not both.
+
+
+<a name="position-transform"></a>
+### `position: fixed` and `transform`
+Browsers break `position: fixed` when an element's parent has a `transform` set. Using transforms creates a new containing block, effectivly forcing the parent to have `position: relative` and the fixed element to behave as `position: absolute`.
+
+[See the demo](http://jsbin.com/yabek/1/) and read [Eric Meyer's post on the matter](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/).
