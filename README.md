@@ -1,11 +1,27 @@
 # WTF, HTML and CSS?
 
-Open an issue or a pull request to suggest changes or additions. Support for items listed below is not provided.
+Open an issue or a pull request to suggest changes or additions. Support for items listed below is not provided. Links to additional resources are provided whenever possible.
+
+### Contents
+
+1. [Set your doctype](#set-your-doctype)
+2. [Box model math](#box-model-math)
+3. [Floats come first](#floats-come-first)
+4. [Floats and clearing](#floats-and-clearing)
+5. [Floats and computed height](#floats-and-computed-height)
+6. [Vertical margins often collapse](#vertical-margins-often-collapse)
+7. [Styling table rows](#styling-table-rows)
+8. [Firefox fubars `<input>` buttons](#firefox-fubars-input)
+9. [Always set a `type` on `<button>`s](#always-set-a-type-on-buttons)
+10. [Internet Explorer's selector limit](#internet-explorers-selectors)
+11. [Position explained](#position-explained)
+12. [Position and width](#position-and-width)
+13. [`transform` and `position: fixed`](#transform-and-position-fixed)
 
 -----
 
 ### Set your doctype
-Always include the HTML5 doctype, otherwise you'll run into tons of issues like malformed tables, inputs, and the like.
+Always include the HTML5 doctype, `<!DOCTYPE html>`, otherwise you'll run into tons of issues like malformed tables, inputs, and the like.
 
 ### Box model math
 Elements that have a set `width` become *wider* when they have `padding` and/or `border-width`. To avoid these problems, make use of the now common [`box-sizing: border-box` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
@@ -31,7 +47,7 @@ Table rows, `<tr>`s, cannot be styled unless you set `border-collapse: separate;
 ### Firefox fubars `<input>` buttons
 Don't use button or submit buttons (e.g., `<input type="button">...</input>` or `<input type="submit">...</input>`). Firefox still sets styles that cannot be overridden by custom CSS, thus causing these buttons to be taller than a `<button>` element.
 
-### Always set a `type` on `<buttons>`s
+### Always set a `type` on `<button>`s
 The default value is `submit`, meaning any button in a form can submit the form. Use `type="button"` for anything that doesn't submit the form and `type="submit"` for those that do.
 
 ### Internet Explorer's selector limit
