@@ -188,7 +188,23 @@ For actions that require a `<button>` and are not in a form, use the `type="butt
 
 <a name="ie-selector-limit"></a>
 ### Internet Explorer's selector limit
-Internet Explorer 9 and below have a max of 4,096 selectors per stylesheet. Anything after this limit is ignored by the browser. Either split your CSS up, or start refactoring. I'd suggest the latter.
+Internet Explorer 9 and below have a max of 4,096 selectors per stylesheet. They also have a limit of 31 stylesheets. Anything after this limit is ignored by the browser. Either split your CSS up, or start refactoring. I'd suggest the latter.
+
+As a helpful side note, here's how browsers count selectors:
+
+```css
+/* One selector */
+.element { }
+
+/* Two more selectors */
+.element,
+.other-element { }
+
+/* Three more selectors */
+input[type="text"],
+.form-control,
+.form-group > input { }
+```
 
 
 <a name="position-explained"></a>
