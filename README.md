@@ -1,6 +1,6 @@
 # WTF, HTML and CSS?
 
-**WTF, HTML and CSS?** is a list of reasons your shit may be fucked. Put another way, it's a guide to common HTML and CSS quandaries, gotchas, misconceptions, oversights, and more.
+Open an issue or a pull request to suggest changes or additions. Support for any of the issues below is not provided.
 
 -----
 
@@ -47,9 +47,6 @@ You don't need to set `width: 100%` on an element with `position: [absolute|fixe
 `position: fixed` breaks when an element's parent has a `transform` set. Using transforms creates a new containing block, effectivly forcing the parent to have `position: relative` and the fixed element to behave as `position: absolute`. [See the demo](http://jsbin.com/yabek/1/) and read [Eric Meyer's post on the matter](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/).
 
 -----
-
-## Contributing
-Open an issue or a pull request to suggest changes or additions.
 
 ## Copyright and license
 Copyright Mark Otto and released under the MIT license.
