@@ -4,19 +4,19 @@ Open an issue or a pull request to suggest changes or additions. Support for ite
 
 ### Contents
 
-1. [Set your doctype](#set-your-doctype)
-2. [Box model math](#box-model-math)
-3. [Floats come first](#floats-come-first)
-4. [Floats and clearing](#floats-and-clearing)
-5. [Floats and computed height](#floats-and-computed-height)
-6. [Vertical margins often collapse](#vertical-margins-often-collapse)
-7. [Styling table rows](#styling-table-rows)
-8. [Firefox fubars `<input>` buttons](#firefox-fubars-input)
-9. [Always set a `type` on `<button>`s](#always-set-a-type-on-buttons)
-10. [Internet Explorer's selector limit](#internet-explorers-selectors)
-11. [Position explained](#position-explained)
-12. [Position and width](#position-and-width)
-13. [`transform` and `position: fixed`](#transform-and-position-fixed)
+- [Set your doctype](#set-your-doctype)
+- [Box model math](#box-model-math)
+- [Floats come first](#floats-come-first)
+- [Floats and clearing](#floats-and-clearing)
+- [Floats and computed height](#floats-and-computed-height)
+- [Vertical margins often collapse](#vertical-margins-often-collapse)
+- [Styling table rows](#styling-table-rows)
+- [Firefox fubars `<input>` buttons](#firefox-fubars-input)
+- [Always set a `type` on `<button>`s](#always-set-a-type-on-buttons)
+- [Internet Explorer's selector limit](#internet-explorers-selectors)
+- [Position explained](#position-explained)
+- [Position and width](#position-and-width)
+- [`transform` and `position: fixed`](#transform-and-position-fixed)
 
 -----
 
