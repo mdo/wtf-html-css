@@ -1,6 +1,6 @@
 name:          "WTF, HTML and CSS?"
 url:           http://wtfhtmlcss.com
-github:        https://github.com/mdo/wtf-html-css
+repo:          https://github.com/mdo/wtf-html-css
 twitter:       https://twitter.com/mdo
 
 markdown:      redcarpet
