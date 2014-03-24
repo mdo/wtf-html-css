@@ -195,6 +195,12 @@ pre code {
  * Footer
  */
 
+.back-to-top {
+  position: fixed; 
+  bottom: 15px; 
+  right: 15px;
+}
+
 .footer {
   margin-top: 3rem;
   padding: 3rem 1rem;
