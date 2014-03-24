@@ -203,6 +203,6 @@ Don't set `width: 100%;` on an element that has `position: [absolute|fixed];`, `
 
 <a name="position-transforms"></a>
 ### Fixed position and transforms
-Browsers break `position: fixed;` when an element's parent has a `transform` set. Using transforms creates a new containing block, effectivly forcing the parent to have `position: relative;` and the fixed element to behave as `position: absolute;`.
+Browsers break `position: fixed;` when an element's parent has a `transform` set. Using transforms creates a new containing block, effectively forcing the parent to have `position: relative;` and the fixed element to behave as `position: absolute;`.
 
 [See the demo](http://jsbin.com/yabek/1/) and read [Eric Meyer's post on the matter](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/).
