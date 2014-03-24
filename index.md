@@ -32,7 +32,7 @@ Always include a doctype. I recommend the simple HTML5 doctype:
 Skipping the doctype can cause issues with malformed tables, inputs, and more.
 
 
-<a name="box-model"></a>
+<a name="box-model-math"></a>
 ### Box model math
 Elements that have a set `width` become *wider* when they have `padding` and/or `border-width`. To avoid these problems, make use of the now common [`box-sizing: border-box;` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
