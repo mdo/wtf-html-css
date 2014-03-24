@@ -169,6 +169,8 @@ input::-moz-focus-inner {
 
 However, [as David Walsh outlines](http://davidwalsh.name/firefox-buttons), this doesn't fix everything. Just use the `<button>` element.
 
+**Good news!** It looks like [a fix for this](https://bugzilla.mozilla.org/show_bug.cgi?id=697451#c43) might be coming in Firefox 30. That's good news for our future selves, but be aware this doesn't fix older versions.
+
 
 <a name="buttons-type"></a>
 ### Always set a `type` on `<button>`s
