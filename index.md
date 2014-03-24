@@ -141,7 +141,7 @@ Top and bottom margins can and will collapse in many situations, but never for f
 
 <a name="styling-table-rows"></a>
 ### Styling table rows
-Table rows, `<tr>`s, cannot be styled unless you set `border-collapse: separate;` on the parent `<table>`.
+Table rows, `<tr>`s, do not receive `border`s unless you set `border-collapse: collapse;` on the parent `<table>`. Moreover, if the `<tr>` and children `<td>`s or `<th>`s have the *same* `border-width`, the rows will not see their border applied. [See this JS Bin link for an example.](http://jsbin.com/yabek/2/)
 
 
 <a name="buttons-firefox"></a>
