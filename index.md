@@ -136,7 +136,7 @@ Elements with a `float` will automatically become `display: block;`. **Do not se
 ### Vertically adjacent margins collapse
 Top and bottom margins can and will collapse in many situations, but never for floated or absolutely positioned elements. [Read this MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing) to find out more.
 
-**Horizontally adjecent margins will never collapse.**
+**Horizontally adjacent margins will never collapse.**
 
 
 <a name="styling-table-rows"></a>
