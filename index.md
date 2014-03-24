@@ -185,10 +185,28 @@ For actions that require a `<button>` and are not in a form, use the `type="butt
 <button class="dismiss" type="button">x</button>
 ```
 
+**Fun fact:** Apparently IE7 doesn't properly support the `value` attribute on `<button>`s. Instead of reading the attribute's content, it pulls from the innerHTML (the content between the opening and closing `<button>` tags). However, I don't see this as a huge concern for two reasons: IE7 usage is way down, and it seems rather uncommon to set both a `value` and the innerHTML on `<button>`s.
+
 
 <a name="ie-selector-limit"></a>
 ### Internet Explorer's selector limit
-Internet Explorer 9 and below have a max of 4,096 selectors per stylesheet. Anything after this limit is ignored by the browser. Either split your CSS up, or start refactoring. I'd suggest the latter.
+Internet Explorer 9 and below have a max of 4,096 selectors per stylesheet. They also have a limit of 31 stylesheets. Anything after this limit is ignored by the browser. Either split your CSS up, or start refactoring. I'd suggest the latter.
+
+As a helpful side note, here's how browsers count selectors:
+
+```css
+/* One selector */
+.element { }
+
+/* Two more selectors */
+.element,
+.other-element { }
+
+/* Three more selectors */
+input[type="text"],
+.form-control,
+.form-group > input { }
+```
 
 
 <a name="position-explained"></a>
