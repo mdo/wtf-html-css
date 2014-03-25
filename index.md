@@ -170,7 +170,7 @@ Should you wish to go the second route, just don't set a `line-height` and use *
 **Good news!** *It looks like [a fix for this](https://bugzilla.mozilla.org/show_bug.cgi?id=697451#c43) might be coming in Firefox 30. That's good news for our future selves, but be aware this doesn't fix older versions.*
 
 
-<a name="buttons-firefix-outline"></a>
+<a name="buttons-firefox-outline"></a>
 ### Firefox inner outline on buttons
 
 Firefox [adds an inner outline](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to buttons (`<input>`s and `<button>`s) on `:focus`. Apparently it's for accessibility, but it's placement seems rather odd. Use this CSS to override it:
