@@ -51,7 +51,7 @@ html {
 
 body {
   margin: 0;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   font: 1rem/1.5 "PT Sans", sans-serif;
   color: #5a5a5a;
 }
@@ -155,8 +155,6 @@ pre code {
 
 .container {
   max-width: 30rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
