@@ -69,7 +69,7 @@ html {
 
 <a name="floats-first"></a>
 ### Floats first
-Floated elements should always come first in the document order. Floated require something to wrap around, otherwise they can cause a step down effect, instead appearing below the content.
+Floated elements should always come first in the document order. Floated elements require something to wrap around, otherwise they can cause a step down effect, instead appearing below the content.
 
 ```html
 <div class="parent">
