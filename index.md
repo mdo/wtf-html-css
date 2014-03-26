@@ -15,7 +15,7 @@ layout: default
 - [Styling table rows](#styling-table-rows)
 - [Firefox and `<input>` buttons](#buttons-firefox)
 - [Firefox inner outline on buttons](#buttons-firefox-outline)
-- [Always set a `type` on `<button>`s](#buttons-type)
+- [Always set a `type` on `<button>`s inside `<form>`s](#buttons-type)
 - [Internet Explorer's selector limit](#ie-selector-limit)
 - [Position explained](#position-explained)
 - [Position and width](#position-width)
@@ -189,18 +189,18 @@ You can see this fix in action in the same [JS Bin example](http://jsbin.com/yab
 
 
 <a name="buttons-type"></a>
-### Always set a `type` on `<button>`s
-The default value is `submit`, meaning any button in a form can submit the form. Use `type="button"` for anything that doesn't submit the form and `type="submit"` for those that do.
+### Always set a `type` on `<button>`s inside `<form>`s
+Inside a `<form>`, the default value for a button's `type` is `submit`, meaning any button in a form can submit the form. Use `type="button"` for anything that doesn't submit the form, and consider adding an explicit `type="submit"` for those that do.
 
 ```html
 <button type="submit">Save changes</button>
 <button type="button">Cancel</button>
 ```
 
-For actions that require a `<button>` and are not in a form, use the `type="button"`.
+For actions that require a `<button>` and are not in a form, you can leave off the `type` attribute.
 
 ```html
-<button class="dismiss" type="button">x</button>
+<button class="dismiss">x</button>
 ```
 
 **Fun fact:** *Apparently IE7 doesn't properly support the `value` attribute on `<button>`s. Instead of reading the attribute's content, it pulls from the innerHTML (the content between the opening and closing `<button>` tags). However, I don't see this as a huge concern for two reasons: IE7 usage is way down, and it seems rather uncommon to set both a `value` and the innerHTML on `<button>`s.*
