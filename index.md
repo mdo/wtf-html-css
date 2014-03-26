@@ -151,7 +151,7 @@ Table rows, `<tr>`s, do not receive `border`s unless you set `border-collapse: c
 For reasons unknown, Firefox applies a `line-height` to submit and button `<input>`s that cannot be overridden with custom CSS. You have two options in dealing with this:
 
 1. Stick to `<button>` elements
-2. Don't using `line-height` in your buttons
+2. Don't use `line-height` on your buttons
 
 Should you go with the first route (and I recommend this one anyway because `<button>`s are great), here's what you need to know:
 
@@ -173,7 +173,7 @@ Should you wish to go the second route, just don't set a `line-height` and use *
 <a name="buttons-firefox-outline"></a>
 ### Firefox inner outline on buttons
 
-Firefox [adds an inner outline](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to buttons (`<input>`s and `<button>`s) on `:focus`. Apparently it's for accessibility, but it's placement seems rather odd. Use this CSS to override it:
+Firefox [adds an inner outline](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to buttons (`<input>`s and `<button>`s) on `:focus`. Apparently it's for accessibility, but its placement seems rather odd. Use this CSS to override it:
 
 ```css
 input::-moz-focus-inner,
