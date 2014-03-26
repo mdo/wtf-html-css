@@ -130,7 +130,7 @@ Elements with a `float` will automatically become `display: block;`. Do not set 
 }
 ```
 
-**Fun fact:** *Years ago, we *had* to set `display: inline;` for most floats to work properly in IE6 to avoid the [double margin bug](http://www.positioniseverything.net/explorer/doubled-margin.html). However, those days have long passed.*
+**Fun fact:** *Years ago, we <strong>had</strong> to set `display: inline;` for most floats to work properly in IE6 to avoid the [double margin bug](http://www.positioniseverything.net/explorer/doubled-margin.html). However, those days have long passed.*
 
 
 <a name="vertical-margins-collapse"></a>
