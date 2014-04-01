@@ -214,7 +214,8 @@ pre code {
 
 
 /*
- * Syntax highlighting
+ * Syntax highlighting and ads
  */
 
 {% include syntax.css %}
+{% include ads.css %}
