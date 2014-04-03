@@ -20,6 +20,7 @@ layout: default
 - [Position explained](#position-explained)
 - [Position and width](#position-width)
 - [Fixed position and transforms](#position-transforms)
+- [Persian and Arabic Fix for iOS and Android](#persian-fix)
 
 
 <a name="doctype"></a>
@@ -242,3 +243,26 @@ Don't set `width: 100%;` on an element that has `position: [absolute|fixed];`, `
 Browsers break `position: fixed;` when an element's parent has a `transform` set. Using transforms creates a new containing block, effectively forcing the parent to have `position: relative;` and the fixed element to behave as `position: absolute;`.
 
 [See the demo](http://jsbin.com/yabek/1/) and read [Eric Meyer's post on the matter](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/).
+
+
+<a name="persian-fix"></a>
+### Persian and Arabic Fix for iOS and Android
+If you design a website for a Persian customer, you'll encounter a problem with Web Fonts and Handheld Devices. The web font will be downloaded but won't have any effect on the page.
+There is a library called [Persian Parser](https://github.com/sallar/persianParser) which you can simply include it in your html page and call it for the elements that you want.
+
+```javascript
+<script src="persianParser.js"></script>
+```
+
+An Example:
+```javascript
+<script>
+    var elems = document.querySelectorAll('h1, h2, p');
+
+    for(i = 0; i <= elems.length; i++){
+        if( typeof elems[i] !== 'undefined' ){
+            elems[i].innerHTML = persianParser(elems[i].innerHTML).parse();
+        }
+    }
+</script>
+```
