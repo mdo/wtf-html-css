@@ -20,6 +20,7 @@ layout: default
 - [Position explained](#position-explained)
 - [Position and width](#position-width)
 - [Fixed position and transforms](#position-transforms)
+- [`::before` and `::after` pseudo-elements](#before-and-after)
 
 
 <a name="doctype"></a>
@@ -242,3 +243,21 @@ Don't set `width: 100%;` on an element that has `position: [absolute|fixed];`, `
 Browsers break `position: fixed;` when an element's parent has a `transform` set. Using transforms creates a new containing block, effectively forcing the parent to have `position: relative;` and the fixed element to behave as `position: absolute;`.
 
 [See the demo](http://jsbin.com/yabek/1/) and read [Eric Meyer's post on the matter](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/).
+
+<a name="before-and-after"></a>
+### `::before` and `::after` pseudo-elements
+When you specify `::before` or `::after` for some element you create additional item *inside* the element. And as its name it appears before or after element's content.
+
+For instance, you couldn't add `::after` pseudo-element for `img`, 'cause there's no content for the image.
+
+```css
+/* I want to add some text after image,
+   but seems it's not working! WTF?! */
+.some-image:after {
+  content: "Hello, world!"
+}
+```
+
+It doesn't work in such way.
+
+**Pro-Tip!** *Sometimes you will see double colons (::) instead of just one (:). It's just a formal distinguish between pseudo-classes and pseudo-elements, in practice you can use both as the same.*
