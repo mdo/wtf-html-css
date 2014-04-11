@@ -19,6 +19,7 @@ Open an issue or a pull request to suggest changes or additions.
 
 Translations are maintained by their creators and may not always be up to date with the original here.
 
+- [Italian](http://aauri.github.io/wtf-html-css/) - Translated by [aauri](https://github.com/aauri)
 - [Korean](http://snack-x.github.io/wtf-html-css/) - Translated by [Snack](https://github.com/Snack-X)
 - [Portuguese](http://webfatorial.github.io/wtf-html-css/) - Translated by [webfatorial](http://webfatorial.com/)
 
