@@ -20,6 +20,8 @@ layout: default
 - [Position explained](#position-explained)
 - [Position and width](#position-width)
 - [Fixed position and transforms](#position-transforms)
+- [Z-index](#z-index)
+- [Z-index gotchas](#z-index-gotchas)
 
 
 <a name="doctype"></a>
@@ -242,3 +244,36 @@ Don't set `width: 100%;` on an element that has `position: [absolute|fixed];`, `
 Browsers break `position: fixed;` when an element's parent has a `transform` set. Using transforms creates a new containing block, effectively forcing the parent to have `position: relative;` and the fixed element to behave as `position: absolute;`.
 
 [See the demo](http://jsbin.com/yabek/1/) and read [Eric Meyer's post on the matter](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/).
+
+
+<a name="z-index"></a>
+### Z-index explained
+If you have 2 or more elements in the DOM that overlap, `z-index` can be used to control which one shows on top of the other. The higher the z-index value, the higher up in the 'z-axis' the element will appear. Sounds simple right? Thing is, z-index is only a small part of what controls the vertical stacking order of DOM elements (let's break out the pizza metaphor):
+
+- Pizza base: sitting at the bottom are the normal, unpositioned elements
+- Tomato sauce:  floated elements appear above these
+- Cheese:  sprinkled right on top are the positioned elements (i.e. an element with a position set to anything other than the default `position: static;`).
+
+Within these three categories the stacking order is controlled by the order of the elements in the DOM, with elements at the end appearing on top.
+
+**So where does `z-index` come in?**<br />
+Z-index won’t do a thing unless the element you are applying it to is positioned, therefore it can only be used for controlling the stack order of your elements in the cheesy layer.
+
+**But isn't that also controlled by their order in the DOM?** <br />
+Yes it is, all z-index really allows you to do is override that ordering.<br />
+See [MDN's in-depth explanation of z-index](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index)
+
+<a name="z-index-gotchas"></a>
+### Z-index gotchas
+
+- To be able to use z-index to position one element on top of the other they need to be in the same **stacking context**. The `<html>` element provides the main stacking context, but any element that is positioned and has a z-index applied will start a new stacking context. See the [MDN page on stacking context](https://developer.mozilla.org/en/CSS/Understanding_z-index/The_stacking_context) for a full explanation.
+- Assigning an opacity of anything other than 1 to a non-positioned element will cause that element to jump up the stacking order _and_ create a new stacking context.
+- IE6 and IE7 can be a world of pain when it comes to z-index as due to a well-known bug they start new stacking contexts when they shouldn't. [More details here](http://caffeineoncode.com/2010/07/the-internet-explorer-z-index-bug/)
+
+
+
+
+
+
+
+
