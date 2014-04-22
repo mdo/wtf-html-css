@@ -22,6 +22,7 @@ Translations are maintained by their creators and may not always be up to date w
 - [Italian](http://aauri.github.io/wtf-html-css/) - Translated by [aauri](https://github.com/aauri)
 - [Korean](http://snack-x.github.io/wtf-html-css/) - Translated by [Snack](https://github.com/Snack-X)
 - [Portuguese](http://webfatorial.github.io/wtf-html-css/) - Translated by [webfatorial](http://webfatorial.com/)
+- [Spanish](http://aauri.github.io/wtf-html-y-css/) - Translated by [aauri](https://github.com/aauri)
 
 Have a translation you'd like to link to? Open a pull request to add it here. Be sure to keep it alphabetical.
 
