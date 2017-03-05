@@ -20,11 +20,11 @@ Open an issue or a pull request to suggest changes or additions.
 Translations are maintained by their creators and may not always be up to date with the original here.
 
 - [French](http://mathieuhays.github.io/wtf-html-css/) - Translated by [mathieuhays](https://github.com/mathieuhays)
-- [Italian](http://aauri.github.io/wtf-html-css/) - Translated by [aauri](https://github.com/aauri)
+- [Italian](http://uncasually.github.io/wtf-html-css/) - Translated by [uncasually](https://github.com/uncasually)
 - [Japan](http://makotot.github.io/wtf-html-css/) - Translated by [makotot](https://github.com/makotot)
 - [Korean](http://snack-x.github.io/wtf-html-css/) - Translated by [Snack](https://github.com/Snack-X)
 - [Portuguese](http://webfatorial.github.io/wtf-html-css/) - Translated by [webfatorial](http://webfatorial.com/)
-- [Spanish](http://aauri.github.io/wtf-html-y-css/) - Translated by [aauri](https://github.com/aauri)
+- [Spanish](http://uncasually.github.io/wtf-html-y-css/) - Translated by [uncasually](https://github.com/uncasually)
 - [Russian](http://elforastero.github.io/wtf-html-css/) - Translated by [ElForastero](https://github.com/elforastero)
 - [Chinese Simplified](https://lizheming.github.io/wtf-html-css/) - Translated by [lizheming](https://github.com/lizheming)
 
