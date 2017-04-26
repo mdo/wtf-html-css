@@ -167,7 +167,7 @@ Should you go with the first route (and I recommend this one anyway because `<bu
 
 Should you wish to go the second route, just don't set a `line-height` and use *only* `padding` to vertically align button text. [View this JS Bin example](http://jsbin.com/yabek/4/) in Firefox to see the original problem and the workaround.
 
-**Good news!** *It looks like [a fix for this](https://bugzilla.mozilla.org/show_bug.cgi?id=697451#c43) might be coming in Firefox 30. That's good news for our future selves, but be aware this doesn't fix older versions.*
+**Good news!** *Mozilla [fixed this](https://bugzilla.mozilla.org/show_bug.cgi?id=697451#c43) since Firefox 30 (June 2014). That's good news, but be aware this doesn't fix older versions.*
 
 
 <a name="buttons-firefox-outline"></a>
