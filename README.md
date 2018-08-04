@@ -1,33 +1,35 @@
 # WTF, HTML and CSS?
 
-**WTF, HTML and CSS?** is a list of reasons HTML and CSS might make you say what the fuck. It's a curated list of commonly frustrating HTML and CSS quandaries, miscues, and dilemmas, created with the goal of making them *less* common.
+**WTF, HTML and CSS?** це перелік причин, за яких HTML та CSS можуть змусити вас сказати "що в біса коїться?". Це кураторський перелік невідповідностей, помилок і дилем HTML та CSS, що засмучують, створений з метою зробити їх *менш* пересічними.
 
-**[Start reading ☞](http://wtfhtmlcss.com)**
+**[Почніть читати ☞](https://thestd.github.io/wtf-html-css/)**
 
 ---
 
-### Contribute
+### Внески
 
-Open an issue or a pull request to suggest changes or additions.
+Відкрийте issue чи pull request, щоб запропонувати зміни чи доповнення.
 
+### Ліцензія
 
-### License
-
-[MIT licensed.](LICENSE.md) Copyright 2014 @mdo.
+[MIT licensed.](LICENSE.md)
+Copyright 2014 @mdo.
+Copyright 2018 @thestd.
 
 ### Translations
 
-Translations are maintained by their creators and may not always be up to date with the original here.
+Переклади підтримуються їх творцями і не завжди можуть бути оновлені з цим оригіналом.
 
-- [French](http://mathieuhays.github.io/wtf-html-css/) - Translated by [mathieuhays](https://github.com/mathieuhays)
-- [Italian](http://uncasually.github.io/wtf-html-css/) - Translated by [uncasually](https://github.com/uncasually)
-- [Japan](http://makotot.github.io/wtf-html-css/) - Translated by [makotot](https://github.com/makotot)
-- [Korean](http://snack-x.github.io/wtf-html-css/) - Translated by [Snack](https://github.com/Snack-X)
-- [Portuguese](http://webfatorial.github.io/wtf-html-css/) - Translated by [webfatorial](http://webfatorial.com/)
-- [Spanish](http://uncasually.github.io/wtf-html-y-css/) - Translated by [uncasually](https://github.com/uncasually)
-- [Russian](http://elforastero.github.io/wtf-html-css/) - Translated by [ElForastero](https://github.com/elforastero)
-- [Chinese Simplified](https://lizheming.github.io/wtf-html-css/) - Translated by [lizheming](https://github.com/lizheming)
+- [French](http://mathieuhays.github.io/wtf-html-css/) - Перекладено [mathieuhays](https://github.com/mathieuhays)
+- [Italian](http://uncasually.github.io/wtf-html-css/) - Перекладено [uncasually](https://github.com/uncasually)
+- [Japan](http://makotot.github.io/wtf-html-css/) - Перекладено [makotot](https://github.com/makotot)
+- [Korean](http://snack-x.github.io/wtf-html-css/) - Перекладено [Snack](https://github.com/Snack-X)
+- [Portuguese](http://webfatorial.github.io/wtf-html-css/) - Перекладено [webfatorial](http://webfatorial.com/)
+- [Spanish](http://uncasually.github.io/wtf-html-y-css/) - Перекладено [uncasually](https://github.com/uncasually)
+- [Russian](http://elforastero.github.io/wtf-html-css/) - Перекладено [ElForastero](https://github.com/elforastero)
+- [Ukrainian](http://thestd.github.io/wtf-html-css/) - Перекладено [std::](https://github.com/thestd)
+- [Chinese Simplified](https://lizheming.github.io/wtf-html-css/) - Перекладено [lizheming](https://github.com/lizheming)
 
-Have a translation you'd like to link to? Open a pull request to add it here. Be sure to keep it alphabetical.
+Маєте переклад, з яким бажаєте пов'язати? Відкрийте pull request, щоб додати його сюди. Не забудьте зберегти його в алфавітному порядку.
 
 <3
