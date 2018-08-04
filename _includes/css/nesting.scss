@@ -1,8 +1,8 @@
-// Without nesting
+// Без комбінування
 .table > thead > tr > th { … }
 .table > thead > tr > td { … }
 
-// With nesting
+// З комбінуванням
 .table > thead > tr {
   > th { … }
   > td { … }
