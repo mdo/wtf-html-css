@@ -4,12 +4,12 @@ layout: default
 
 ### Contents
 
-- [Declare a doctype](#doctype)
-- [Box model math](#box-model-math)
-- [Rem units and Mobile Safari](#rems-mobile-safari)
-- [Floats first](#floats-first)
-- [Floats and clearing](#floats-clearing)
-- [Floats and computed height](#floats-computed-height)
+- [Декларуйте doctype](#doctype)
+- [Математика box моделі](#box-model-math)
+- [Rem одиниці та мобільний Safari](#rems-mobile-safari)
+- [Спочатку float-и](#floats-first)
+- [Float-и та очищення](#floats-clearing)
+- [Float-и і обчислювана висота](#floats-computed-height)
 - [Floated are block level](#floats-block-level)
 - [Vertical margins often collapse](#vertical-margins-collapse)
 - [Styling table rows](#styling-table-rows)
@@ -23,40 +23,40 @@ layout: default
 
 
 <a name="doctype"></a>
-### Declare a doctype
-Always include a doctype. I recommend the simple HTML5 doctype:
+### Декларуйте doctype
+Завжди додавайте doctype. Я рекомендую простий HTML5 doctype:
 
 ```html
 <!DOCTYPE html>
 ```
 
-[Skipping the doctype can cause issues](http://quirks.spec.whatwg.org) with malformed tables, inputs, and more as the page will be rendered in quirks mode.
+[Упускання doctype може спричиняти помилки](http://quirks.spec.whatwg.org) з неправильними таблицями, формами тощо, оскільки сторінка буде виведена в примхливому режимі.
 
 
 <a name="box-model-math"></a>
-### Box model math
-Elements that have a set `width` become *wider* when they have `padding` and/or `border-width`. To avoid these problems, make use of the now common [`box-sizing: border-box;` reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+### Математика box моделі
+Елементи, що мають встановлену ширину `width` стають *ширшими* коли вони мають встановлені `padding` та/чи `border-width`. Аби уникнути цих проблем, використовуйте тепер повсякденне [`box-sizing: border-box;` скидання](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
 
 <a name="rems-mobile-safari"></a>
-### Rem units and Mobile Safari
-While Mobile Safari supports the use of `rem`s in all property values, it seems to shit the bed when `rem`s are used in dimensional media queries and infinitely flashes the page's text in different sizes.
+### Rem одиниці та мобільний Safari
+Хоча мобільний Safari підтримує використання `rem`-ів у всіх властивостях, він, схоже, нервово курить в сторонці, коли використовуються `rem` в просторових мультимедійних запитах і нескінченно миготить текст сторінки в різних розмірах.
 
-For now, use `em`s in place of `rem`s.
+Поки що, використовуйте `em`-и замість `rem`-ів.
 
 ```css
 html {
   font-size: 16px;
 }
 
-/* Causes flashing bug in Mobile Safari */
+/* Спричиняє миготіння в мобільному Safari */
 @media (min-width: 40rem) {
   html {
     font-size: 20px;
   }
 }
 
-/* Works great in Mobile Safari */
+/* Прекрасно працює в мобільному Safari */
 @media (min-width: 40em) {
   html {
     font-size: 20px;
@@ -64,16 +64,16 @@ html {
 }
 ```
 
-**Help!** *If you have a link to an Apple or WebKit bug report for this, I'd love to include it. I'm unsure where to report this as it only applies to Mobile, and not Desktop, Safari.*
+**Допоможіть!** *Якщо у вас є посилання на повідомлення про помилку Apple або WebKit, я хотів би його включити. Я не впевнений, куди повідомити про це, оскільки баг стосується лише мобільного, а не десктопного Safari.*
 
 
 <a name="floats-first"></a>
-### Floats first
-Floated elements should always come first in the document order. Floated elements require something to wrap around, otherwise they can cause a step down effect, instead appearing below the content.
+### Спочатку float-и
+Плаваючі елементи повинні завжди бути першими в порядку документа. Плаваючі елементи зобов'язані щось обернути, інакше вони можуть спричинити ефект випадання, а не з'являтиметься нижче вмісту.
 
 ```html
 <div class="parent">
-  <div class="float">Float</div>
+  <div class="float">Плаваємо</div>
   <div class="content">
     <!-- ... -->
   </div>
@@ -82,10 +82,10 @@ Floated elements should always come first in the document order. Floated element
 
 
 <a name="floats-clearing"></a>
-### Floats and clearing
-If you float it, you *probably* need to clear it. Any content that follows an element with a `float` will wrap around that element until cleared. To clear floats, use one of the following techniques.
+### Float-и та очищення
+Якщо ви пускаєте щось у плавання, то, *можливо*, варто щось очистити. Будь-який вміст, який йде за елементом з "float", обертається навколо цього елемента до моменту очищення. Щоб очистити float-и, використовуйте однин з наступних методів.
 
-Use [the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) to clear your floats with a separate class.
+Використовуйте [micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/), аби очистити ваші float-и за допомогою окремого класу.
 
 ```css
 .clearfix:before,
@@ -98,7 +98,7 @@ Use [the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) to cl
 }
 ```
 
-Alternatively, specify `overflow`, with `auto` or `hidden`, on the parent.
+З іншого боку, можна вказати `overflow`, з параметрами `auto` чи `hidden`, для батьківського елемента.
 
 ```css
 .parent {
@@ -109,14 +109,14 @@ Alternatively, specify `overflow`, with `auto` or `hidden`, on the parent.
 }
 ```
 
-Be aware that `overflow` can cause other unintended side effects, typically around positioned elements within the parent.
+Майте на увазі, що `overflow` може спричинити інші небажані побічні ефекти, як правило, навколо розташованих елементів у батьківському елементі.
 
-**Pro-Tip!** *Keep your future self and your coworkers happy by including a comment like `/* clearfix */` when clearing floats as the property can be used for other reasons.*
+**Професійна порада!** *Зберігайте свої нерви на майбутнє та ваших колег задоволенням, включивши коментар на кшталт `/* clearfix */` під час очищення float-ів, оскільки властивість може бути використана з інших причин.*
 
 
 <a name="floats-computed-height"></a>
-### Floats and computed height
-A parent element that has only floated content will have a computed `height: 0;`. Add a clearfix to the parent to force browsers to compute a height.
+### Float-и і обчислювана висота
+Батьківський елемент, який складається лише з float-ів, матиме висоту `height: 0;`. Додайте clearfix для батьківського елементу, аби змусити браузерів обчислювати висоту.
 
 
 <a name="floats-block-level"></a>
