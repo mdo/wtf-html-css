@@ -1,10 +1,10 @@
-/* Bad example */
+/* Поганий приклад */
 /* Modal header */
 .modal-header {
   ...
 }
 
-/* Good example */
+/* Хороший приклад */
 /* Wrapping element for .modal-title and .modal-close */
 .modal-header {
   ...
