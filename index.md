@@ -13,7 +13,6 @@ layout: default
 - [Floated are block level](#floats-block-level)
 - [Vertical margins often collapse](#vertical-margins-collapse)
 - [Styling table rows](#styling-table-rows)
-- [Firefox and `<input>` buttons](#buttons-firefox)
 - [Firefox inner outline on buttons](#buttons-firefox-outline)
 - [Always set a `type` on `<button>`s](#buttons-type)
 - [Internet Explorer's selector limit](#ie-selector-limit)
@@ -143,31 +142,6 @@ Horizontally adjacent margins will **never collapse**.
 <a name="styling-table-rows"></a>
 ### Styling table rows
 Table rows, `<tr>`s, do not receive `border`s unless you set `border-collapse: collapse;` on the parent `<table>`. Moreover, if the `<tr>` and children `<td>`s or `<th>`s have the *same* `border-width`, the rows will not see their border applied. [See this JS Bin link for an example.](http://jsbin.com/yabek/2/)
-
-
-<a name="buttons-firefox"></a>
-### Firefox and `<input>` buttons
-
-For reasons unknown, Firefox applies a `line-height` to submit and button `<input>`s that cannot be overridden with custom CSS. You have two options in dealing with this:
-
-1. Stick to `<button>` elements
-2. Don't use `line-height` on your buttons
-
-Should you go with the first route (and I recommend this one anyway because `<button>`s are great), here's what you need to know:
-
-```html
-<!-- Not so good -->
-<input type="submit" value="Save changes">
-<input type="button" value="Cancel">
-
-<!-- Super good everywhere -->
-<button type="submit">Save changes</button>
-<button type="button">Cancel</button>
-```
-
-Should you wish to go the second route, just don't set a `line-height` and use *only* `padding` to vertically align button text. [View this JS Bin example](http://jsbin.com/yabek/4/) in Firefox to see the original problem and the workaround.
-
-**Good news!** *It looks like [a fix for this](https://bugzilla.mozilla.org/show_bug.cgi?id=697451#c43) might be coming in Firefox 30. That's good news for our future selves, but be aware this doesn't fix older versions.*
 
 
 <a name="buttons-firefox-outline"></a>
