@@ -1,7 +1,7 @@
 /* Ads
 -------------------------------------------------- */
 
-#fusionads {
+#carbonads {
   display: block;
   padding: 2rem 0;
   overflow: hidden; /* clearfix */
@@ -10,27 +10,27 @@
   background-color: #fff;
   border-bottom: 1px solid #eee;
 }
-.fusion-text,
-.fusion-poweredby {
+.carbon-text,
+.carbon-poweredby {
   display: block;
   color: #999;
 }
-.fusion-text:hover,
-.fusion-poweredby:hover {
+.carbon-text:hover,
+.carbon-poweredby:hover {
   color: #08c;
   text-decoration: none;
 }
-.fusion-img {
+.carbon-img {
   float: left;
   margin-right: 1rem;
 }
-.fusion-poweredby {
+.carbon-poweredby {
   display: block !important;
   margin-top: .5rem;
 }
 
 @media (min-width: 50rem) {
-  #fusionads {
+  #carbonads {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -40,7 +40,7 @@
     font-size: .6rem;
     border-bottom: 0;
   }
-  .fusion-img {
+  .carbon-img {
     float: none;
     display: block;
     margin-bottom: .5rem;
