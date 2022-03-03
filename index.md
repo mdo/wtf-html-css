@@ -27,7 +27,7 @@ layout: default
 Always include a doctype. I recommend the simple HTML5 doctype:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 [Skipping the doctype can cause issues](http://quirks.spec.whatwg.org) with malformed tables, inputs, and more as the page will be rendered in quirks mode.
