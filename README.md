@@ -26,6 +26,7 @@ Translations are maintained by their creators and may not always be up to date w
 - [Portuguese](http://webfatorial.github.io/wtf-html-css/) - Translated by [webfatorial](http://webfatorial.com/)
 - [Spanish](http://uncasually.github.io/wtf-html-y-css/) - Translated by [uncasually](https://github.com/uncasually)
 - [Russian](http://elforastero.github.io/wtf-html-css/) - Translated by [ElForastero](https://github.com/elforastero)
+- [Ukrainian](https://wtf-html-css.std.community/) - Translated by [std::](https://github.com/thestd)
 - [Chinese Simplified](https://lizheming.github.io/wtf-html-css/) - Translated by [lizheming](https://github.com/lizheming)
 
 Have a translation you'd like to link to? Open a pull request to add it here. Be sure to keep it alphabetical.
